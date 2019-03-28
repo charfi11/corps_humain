@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+/* font-family: 'Arvo', serif; */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arvo', serif;
+    background-color: #EDEDED;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+h1, main {
+    margin: 50px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 540px;
+    margin-bottom: 80px;
+    position: relative;
+    width: 1000px;
+    /* besoin width précis pour les absolute qui se réfèrent au main */
+}
+
+a {
+    outline:none;
+}
+
+#corps {
+    background-image: url('../img/qijx.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 300px;
+    position: relative;
+}
+
+#placeholder {
+    width: 210px;
+}
+
+.desc {
+    height: 0.5%;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    text-align: left;
+    overflow: hidden;
+
+    filter: opacity(0%);
+    transition: filter 300ms;
+}
+
+.cercle {
+    background-color: black;
+    border-radius: 50%;
+    height: 62px;
+    width: 62px;
+    filter: opacity(70%);
+    z-index: 9;
+}
+
+.cercle:hover {
+    background-color: red;
+}
+
+/* positionnements et relations descriptions */
+
+#epaule {
+position: relative;
+left: 110px;
+top: 70px;
+}
+
+#epaule:hover ~ #placeholder #desc-epaule {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
+
+#oreille {
+position: relative;
+left: -150px;
+top: 30px;
+}
+
+#oreille:hover ~ #placeholder #desc-oreille {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
+
+#ventre {
+position: relative;
+right: 240px;
+top: 160px;
+}
+
+#ventre:hover ~ #placeholder #desc-ventre {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
+
+#cuisse {
+position: relative;
+right: 340px;
+top: 300px;
+}
+
+#cuisse:hover ~ #placeholder #desc-cuisse {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
+
+#pied {
+position: relative;
+right: 340px;
+top: 470px;
+}
+
+#pied:hover ~ #placeholder #desc-pied {
+    height: 100%;
+    filter: opacity(100%);
+    transition: filter 300ms;
+}
